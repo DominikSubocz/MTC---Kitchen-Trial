@@ -9,7 +9,6 @@
     <title>Document</title>
 </head>
 <body>
-
     <header>
         <div class="header-wrapper">
             <div class="mobile-navbar">
@@ -30,21 +29,28 @@
             <hr>
             <div id="mobile-nav" class="mobile-menu-container show-mobile">
                 <div id="mobile-menu" class="mobile-menu hide-mobile-menu">
-                    <div class="icon-conainer mobile-menu-icon" id="close-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/></svg>
+                    <div class="icon-conainer mobile-menu-icon close-icon" id="close-icon">
+                        <a href="javascript:void(0);" onclick="closeMenu()">
+                            <i class="fas fa-times"></i>
+                        </a>
                     </div>
                     <ul class="nav-list-mobile">
                         <li>
+                            <img id="logo" class="logo" src="images/Group 40.png" alt="company logo">
+                            <hr>
+                        </li>
+                        <li>
                             <div>
-                                <i class="fa-brands fa-facebook"></i>
-                                <i class="fa-brands fa-twitter"></i>
-                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-brands-alt fa-facebook-f"></i>
+                                <i class="fa-brands fa-brands-alt fa-twitter"></i>
+                                <i class="fa-brands fa-brands-alt fa-instagram"></i>
                             </div>
                         </li>
                         <li><a href="#">SHOP</a></li>
                         <li><a href="#">PLAN MY KITCHEN</a></li>
                         <li><a href="#">ABOUT US</a></li>
                         <li><a href="#">GALLERY</a></li>
+                        <li><a class="button-outlined-alt" href="#">MY ORDER<i class="fa fa-cart-shopping"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -61,34 +67,46 @@
 
     <main>
         <div class="main-wrapper">
-            <div class="hero-content">
-                <img class="hero-image" src="images/Bitmap.png" alt="Image of a kitchen design">
-                <div class="hero-cta">
-                    <h5>DESIGN AND ORDER YOUR NEW KITCHEN ONLINE TODAY</h5>
-                    <h1>Bespoke & made to measure handmade kitchen design</h1>
-                    <button class="button">ORDER NOW</button>
-
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <div class="slide slide1">
+                        <img class="hero-image" src="images/Bitmap.png" alt="Image of a kitchen design">
+                    </div>
+                    <div class="slide slide2">
+                        <img class="hero-image" src="images/Bitmap2.png" alt="Image of a kitchen design">
+                    </div>
+                    <div class="slide slide3">
+                        <img class="hero-image" src="images/pexels-img.jpg" alt="Image of a kitchen design">
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <h5>DESIGN AND ORDER YOUR NEW KITCHEN ONLINE TODAY</h5>
+                        <h1>Bespoke & made to measure handmade kitchen design</h1>
+                        <button class="button">ORDER NOW</button>
+    
+                    </div>
                 </div>
-                <div class="slider">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
 
+                    <div class="slider">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
             </div>
 
-            <div class="pageCols">
-                <div class="card">
-                    <div class="card-img-container">
-                        <img class="card-img" src="images/Bitmap2.png" alt="Image of kitchen design">
+
+            <div class="banner-section">
+                <div class="banner-card">
+                    <div class="banner-img-container">
+                        <img class="banner-img" src="images/Bitmap2.png" alt="Image of kitchen design">
                     </div>
-                    <div class="card-cta">
-                        <div class="card-text">
-                            <h5>QUALITY CRAFTMANSHIP FROM BUILD TO DELIVER</h5>
+                    <div class="banner-cta">
+                        <div class="banner-text">
+                            <h4>QUALITY CRAFTMANSHIP FROM BUILD TO DELIVERY</h4>
                             <h2>Discover the beauty of a handmade kitchen</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget est sit amet sapien venenatis maximus vel in urna. Nam mauris arcu, feugiat in finibus vitae, sollicitudin id purus. Ut imperdiet, magna eu pharetra tincidunt, mauris purus ultrices.</p>
                         </div>
-                        <div class="card-btn">
+                        <div class="banner-btn">
                             <button class="button">ABOUT US</button>
                         </div>
                     </div>
@@ -99,11 +117,11 @@
     
             <div class="reviews-section">
                 <div class="reviews-card">
-                    <h5>WHAT OUR CUSTOMERS SAY</h5>
+                    <h4>WHAT OUR CUSTOMERS SAY</h4>
                     <h3>Over 35 years expereience designing</h3>
                     <p>Since my first contact I have received a very high level of customer service and advice with my kitchen plans. Ben responded very quickly to all of my emails and delivery of the kitchen was as planned.</p>
-                    <p><h4>Jane, Dundee</h4></p>
-                    <button class="button">FREQUENTLY ASKED QUESTIONS</button>
+                    <h5>Jane, Dundee</h5>
+                    <button class="button faq-button">FREQUENTLY ASKED QUESTIONS</button>
                 </div>
             </div>
 
@@ -136,51 +154,60 @@
     <footer>
         <div class="footer-wrapper">
             <div class="footer-content">
+                <div class="footer-cards">
 
-                <div class="logo-container">
-                    <img id="logo" class="logo" src="images/Group 40.png" alt="company logo">
+                    <hr class="hr-line-footer">
+
+                    <div class="footer-card footer-about">
+                        <h3>About</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">SHOP</a></li>
+                            <li><a href="#">PLAN MY KITCHEN</a></li>
+                            <li><a href="#">ABOUT US</a></li>
+                            <li><a href="#">GALLERY</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-card service-card">
+                        <h3>Service</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                            <li><a href="#">HOW TO BUY</a></li>
+                            <li><a href="#">DOWNLOADS</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-card info-card">
+                        <h3>Info</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">DELIVERY</a></li>
+                            <li><a href="#">TERMS</a></li>
+                            <li><a href="#">PRIVACY</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-card social-card">
+                        <h3>Follow</h3>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fa-brands fa-brands-alt fa-facebook-f"></a></i></li>
+                            <li><a href="#"><i class="fa-brands fa-brands-alt fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-brands-alt fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="footer-card footer-about">
-                    <h3>About</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">SHOP</a></li>
-                        <li><a href="#">PLAN MY KITCHEN</a></li>
-                        <li><a href="#">ABOUT US</a></li>
-                        <li><a href="#">GALLERY</a></li>
-                    </ul>
-                </div>
+                <h5>
+                    Copyright Online Handmade Kitchens 2018 - All rights reserved.
+                    Responsive website design, Development & Hosting by mtc.
+                </h5>
 
-                <div class="footer-card service-card">
-                    <h3>Service</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                        <li><a href="#">HOW TO BUY</a></li>
-                        <li><a href="#">DOWNLOADS</a></li>
-                    </ul>
-                </div>
+                <hr class="hr-line-bottom">
 
-                <div class="footer-card info-card">
-                    <h3>Info</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">DELIVERY</a></li>
-                        <li><a href="#">TERMS</a></li>
-                        <li><a href="#">PRIVACY</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-card social-card">
-                    <h3>Follow</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fa-brands fa-facebook"></i></li>
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </footer>
     
 </body>
+<script src="js/slideshow.js"></script>
 </html>

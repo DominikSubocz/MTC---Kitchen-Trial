@@ -3,7 +3,8 @@
 --h3: 32px;
 --h4: 24px;
 --h5: 18px; 
---p: 15px*/
+--p: 15px
+--review-text: 18px;*/
 
 html, body{
     width: 100%;
@@ -11,10 +12,17 @@ html, body{
 }
 
 ul li{
-    list-style: none
+    list-style: none;
+    font-size: 15px;
+}
+
+ul{
+    padding: 0;
+
 }
 
 a{
+    font-size: 18px;
     text-decoration: none;
 }
 
@@ -22,6 +30,10 @@ a{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+}
+
+.no-scroll{
+    overflow-y: hidden !important;
 }
 
 
@@ -39,8 +51,6 @@ body {
     line-height: 1.5;
     overflow-x: hidden;
     /* padding: 4rem; */
-    padding-bottom: 6rem;
-
 }
 
 h1{
@@ -80,7 +90,7 @@ h5{
     font-size: 18px;
 }
 
-.card h5, .reviews-card h5{
+.banner-text h4, .reviews-card h4{
     color: #D4B254;
 }
 
@@ -139,12 +149,48 @@ a{
 .show-mobile-menu{
     background-color: black;
     display: block;
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     bottom:0;
-    top:0;
+    top:-52px;
+    height: 900vh;
+    width: 100%;
+    z-index: 2;
+}
 
+.nav-list-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-icon{
+    text-align: right;
+    margin-right: 20px;
+    font-size: 24px;
+    padding-top:10px;
+}
+
+.nav-list-mobile .fa-brands{
+    margin:0 15px;
+}
+
+.nav-list-mobile li{
+    margin:10px 0;
+}
+
+.nav-list-mobile li:first-child{
+    width: 100%;
+    text-align: center;
+}
+
+.nav-list-mobile li:first-child .logo{
+    margin-bottom:10px;
+}
+
+.nav-list-mobile li:last-child{
+    margin-top:25px;
 }
 
 .hide-mobile-menu{
@@ -184,7 +230,22 @@ hr{
     border-radius: 32px;
     padding:14px 32px;
     border: none;
-    color: #fff;
+    color: #EEEEEE;
+}
+
+.button-outlined{
+    margin-top:50px;
+    border: 1px solid #EEEEEE;
+    padding:14px 32px;
+    border-radius: 32px;
+}
+
+.button-outlined-alt{
+    background-color: #EEEEEE;
+    border-radius: 32px;
+    padding:14px 32px;
+    border: none;
+    color: #777777;
 }
 
 .dot {
@@ -198,16 +259,20 @@ hr{
     transition: background-color 0.6s ease;
   }
 
-  .pageCols{
+  .banner-section{
     display: flex;
   }
 
-  .card{
+  .banner-btn{
+    margin-top:20px;
+  }
+
+  .banner{
     display: flex;
     padding-bottom: 85px;
   }
 
-  .card-img{
+  .banner-img{
     width: 100%;
   }
 
@@ -220,6 +285,7 @@ hr{
 
   .reviews-section{
     background-color: #EEEEEE;
+    margin: 50px 0;
   }
 
   .reviews-card{
@@ -258,11 +324,49 @@ hr{
     overflow: hidden
 }
 
+.footer-content h5{
+    color: #777777;
+}
+
+footer{
+    margin-top:50px;
+}
+
+
 .footer-wrapper{
+    display: flex;
     background-image: url("/images/footer-img.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.footer-cards, .footer-content{
+    width: 100%;
+}
+
+.fa-brands-alt{
+    color: #000000;
+    background-color: #EEEEEE;
+    padding:5px;
+    border-radius: 50%;
+    width: 25px;
+    text-align: center;
+}
+
+.faq-button{
+    margin:15px 0;
+}
+
+.slider{
+    margin:-39px auto 0 auto;
+    padding-bottom:16px;
+    width: fit-content;
+}
+
+.active{
+    background-color: #D4B254;
+}
+
 
 
 
@@ -273,10 +377,15 @@ hr{
         display: none;
     }
 
-    hr{
+    .header-wrapper hr{
         width: 90%;
         margin-top:-5px;
     }
+
+    .footer-cards .logo-container{
+        margin-top:25px;
+    }
+
 
     .hero-cta{
         display: flex;
@@ -286,41 +395,53 @@ hr{
     }
 
     h1{
-        font-size: calc(52px - 1.5rem);
+        font-size: calc(52px - 1.2rem);
         max-width: 100%;
     }
 
     h2{
-        font-size: calc(42px - 1.2rem);
+        font-size: calc(42px - 0.65rem);
         min-width: 50%;
     }
 
-    h4{
-        font-size: calc(24px - 1rem);
+    h3{
+        font-size: calc(32px - 0.5rem);
+    }
+
+    h4, .social-card .fa-brands{
+        font-size: calc(24px - 0.65rem);
     }
     
     h5{
         font-size: calc(18px - 0.5rem);
     }
 
-    p{
+    p, li{
         font-size: calc(15px - 0.2rem);
+    }
+
+    .reviews-card p{
+        font-size: calc(18px - 0.3rem);
     }
 
     .button{
         font-size: calc(14px - 0.2rem);
     }
 
-    .card{
+    .banner{
         flex-direction: column;
     }
 
-    .card-cta{
+    .banner-cta{
         margin: 0 15px;
     }
 
-    h5{
+    .hero-cta h5{
         margin-bottom:5px;
+    }
+
+    .banner-text h2{
+        max-width: 375px;
     }
 
     .reviews-card{
@@ -328,7 +449,21 @@ hr{
         max-width: 80%;
     }
 
-    .card-text h2, .reviews-card h3, .hero-cta h1{
+    .reviews-card h3{
+        min-width: 260px;
+        max-width: 550px;
+    }
+
+    .reviews-card p{
+        min-width: 295px;
+        max-width: 450px;
+    }
+
+    .reviews-card h5{
+        margin:10px 0;
+    }
+
+    .banner-text h2, .reviews-card h3, .hero-cta h1{
         margin-top:5px;
     }
 
@@ -342,10 +477,60 @@ hr{
     }
 
     .footer-wrapper{
-        display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
+
+
+    .hr-line-footer::before {
+        content: '';
+        background-color: #777777;
+        display: block;
+        width: 35%;
+        height: 1px; 
+      }
+      
+      .hr-line-footer::after {
+        content: '';
+        background-color: #777777;
+        display: block;
+        width: 35%;
+        height: 1px; 
+      }
+
+      .hr-line-footer {
+        border: none;
+        background: url('/images/Group\ 40.png') no-repeat;
+        background-size: 15%;
+        background-position: center;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        height: 100px;
+        align-items: center;
+      }
+
+      .hr-line-bottom{
+        border:none;
+        background-color: #777777;
+        height: 1px; 
+        width: 90%;
+        margin-bottom:75px;
+      }
+
+      .social-card .footer-links li{
+        display: inline-block;
+        margin:0 5px;
+      }
+
+      .footer-content h5{
+        max-width: 350px;
+        margin: 50px auto;
+    }
+    
+
+
 
 }
 
