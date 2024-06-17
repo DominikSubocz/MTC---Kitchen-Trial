@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/ec47febbbd.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-wrapper">
+            <div class="mobile-navbar">
+                <div class="logo-container">
+                    <img id="logo" class="logo" src="images/Group 40.png" alt="company logo">
+                </div>
+                <div class="icon-conainer cart-btn-container show-mobile">
+                    <a href="#">
+                        <i class="fa fa-cart-shopping"></i>
+                    </a>
+                </div>
+                <div class="icon-conainer menu-btn-container show-mobile">
+                    <a href="javascript:void(0);" onclick="openMenu()">
+                        <i class="fa fa-solid fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <div id="mobile-nav" class="mobile-menu-container show-mobile">
+                <div id="mobile-menu" class="mobile-menu hide-mobile-menu">
+                    <div class="icon-conainer mobile-menu-icon" id="close-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/></svg>
+                    </div>
+                    <ul class="nav-list-mobile">
+                        <li>
+                            <div>
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                        </li>
+                        <li><a href="#">SHOP</a></li>
+                        <li><a href="#">PLAN MY KITCHEN</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">GALLERY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-container show-desktop">
+                <ul class="nav-list">
+                    <li><small><a href="#">About us</a></small></li>
+                    <li><small><a href="#">Product</a></small></li>
+                    <li><small><a href="#">Resource</a></small></li>
+                    <li><small><a href="#">Contact</a></small></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-wrapper">
+            <div class="hero-content">
+                <img class="hero-image" src="images/Bitmap.png" alt="Image of a kitchen design">
+                <div class="hero-cta">
+                    <h5>DESIGN AND ORDER YOUR NEW KITCHEN ONLINE TODAY</h5>
+                    <h1>Bespoke & made to measure handmade kitchen design</h1>
+                    <button class="button">ORDER NOW</button>
+
+                </div>
+                <div class="slider">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
+            </div>
+
+            <div class="pageCols">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img class="card-img" src="images/Bitmap2.png" alt="Image of kitchen design">
+                    </div>
+                    <div class="card-cta">
+                        <div class="card-text">
+                            <h5>QUALITY CRAFTMANSHIP FROM BUILD TO DELIVER</h5>
+                            <h2>Discover the beauty of a handmade kitchen</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget est sit amet sapien venenatis maximus vel in urna. Nam mauris arcu, feugiat in finibus vitae, sollicitudin id purus. Ut imperdiet, magna eu pharetra tincidunt, mauris purus ultrices.</p>
+                        </div>
+                        <div class="card-btn">
+                            <button class="button">ABOUT US</button>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+            <div class="reviews-section">
+                <div class="reviews-card">
+                    <h5>WHAT OUR CUSTOMERS SAY</h5>
+                    <h3>Over 35 years expereience designing</h3>
+                    <p>Since my first contact I have received a very high level of customer service and advice with my kitchen plans. Ben responded very quickly to all of my emails and delivery of the kitchen was as planned.</p>
+                    <p><h4>Jane, Dundee</h4></p>
+                    <button class="button">FREQUENTLY ASKED QUESTIONS</button>
+                </div>
+            </div>
+
+            <div class="gallery-section">
+                <h2>Customer Gallery</h2>
+                <div class="gallery-cols">
+                    <div class="gallery-card">
+                        <img class="gallery-img" src="images/1.png" alt="Image of kitchen design with a fridge">
+                    </div>
+                    <div class="gallery-card">
+                        <img class="gallery-img" src="images/2.png" alt="Image red stove and kitchen shelf with stuff on it">
+                    </div>
+                    <div class="gallery-card">
+                        <img class="gallery-img" src="images/3.png" alt="Image of modern kitchen design">
+                    </div>
+                    <div class="gallery-card">
+                        <img class="gallery-img" src="images/4.png" alt="Image of blue wooden kitchen design">
+                    </div>
+                    
+                </div>
+                <button class="button">VIEW MORE</button>
+
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-content">
+
+                <div class="logo-container">
+                    <img id="logo" class="logo" src="images/Group 40.png" alt="company logo">
+                </div>
+
+                <div class="footer-card footer-about">
+                    <h3>About</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">SHOP</a></li>
+                        <li><a href="#">PLAN MY KITCHEN</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">GALLERY</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-card service-card">
+                    <h3>Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">HOW TO BUY</a></li>
+                        <li><a href="#">DOWNLOADS</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-card info-card">
+                    <h3>Info</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">DELIVERY</a></li>
+                        <li><a href="#">TERMS</a></li>
+                        <li><a href="#">PRIVACY</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-card social-card">
+                    <h3>Follow</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
