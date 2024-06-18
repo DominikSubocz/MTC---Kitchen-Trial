@@ -24,6 +24,8 @@ function showReview() {
 
     if (reviewIndex == reviews.length){
         reviewIndex = 0;
+    } else if (reviewIndex < 0){
+        reviewIndex = reviews.length - 1;
     }
 
     // console.log(reviewIndex + "" + reviews.length); Debug

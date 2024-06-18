@@ -12,6 +12,11 @@
   }
 
   @font-face {
+    font-family: HelveticaNeueUltraLight;
+    src: url('/fonts/HelveticaNeueUltraLight.otf');
+  }
+
+  @font-face {
     font-family: HelveticaNeueRoman;
     src: url('/fonts/HelveticaNeueRoman.otf');
   }
@@ -36,6 +41,10 @@ ul{
 a{
     font-size: 18px;
     text-decoration: none;
+}
+
+.nav-list a{
+    font-size: 13px;
 }
 
 * {
@@ -110,6 +119,15 @@ h5{
     font-weight: 400;
 }
 
+.nav-list h5{
+    display: none;
+    font-family: HelveticaNeueUltraLight;
+    letter-spacing: 5px;
+    color: #EEEEEE;
+    margin-top:2px;
+    font-weight: 400;
+}
+
 h6{
     font-family: "Roboto", sans-serif;
     font-size: 13px;
@@ -145,6 +163,25 @@ a{
 .header-wrapper{
     position: absolute;
     width: 100%;
+
+}
+
+.header-wrapper:hover{
+    background-color: #000000;
+}
+
+.header-wrapper:hover .nav-list h5{
+    display: block;
+}
+
+.header-wrapper:hover hr{
+    display: none;
+}
+
+
+.nav-list .logo-container{
+    margin:25px 0;
+    text-align: center;
 }
 
 .mobile-navbar{
@@ -226,8 +263,8 @@ a{
 
 .hide-mobile-menu{
     display: none;
-
 }
+
 
 .hero-content{
     display: flex;
@@ -236,17 +273,19 @@ a{
 }
 
 .hero-image{
+    width: 100%;
+    height: 730px;
     object-fit: cover;
-    max-width: 100%;
-    min-height: 500px;
 }
+
+
 
 .hero-cta{
     max-width: 100%;
     min-width: 320px;
     position: absolute;
     text-align: center;
-    top:15vw;
+    top:225px;
     bottom:0;
     height: fit-content;
 }
@@ -281,7 +320,7 @@ hr{
 
 .oval {
     cursor: pointer;
-    height: 3px;
+    height: 4px;
     width: 42px;
     margin: 0 2px;
     background-color: #bbb;
@@ -375,7 +414,6 @@ hr{
   .reviews-card h3{
     max-width: 550px;
     margin-top:5px;
-
   }
 
   .reviews-card p {
@@ -460,8 +498,8 @@ footer{
 }
 
 .slider{
-    margin:-39px auto 0 auto;
-    padding-bottom:16px;
+    margin:-59px auto 0 auto;
+    padding-bottom:30px;
     width: fit-content;
 }
 
@@ -491,13 +529,12 @@ footer{
 
 .nav-list li:not(:nth-child(2)){
     margin:0 15px;
-    max-width: 15%;
 }
 
 
 .nav-list li:nth-child(2){
     order: 2;
-    margin:0 100px;
+    margin:0 45px;
 }
 
 .nav-list li:nth-child(1){
@@ -506,7 +543,13 @@ footer{
 
 }
 
+.nav-list li:nth-child(4){
+    margin-right: 0;
+
+}
+
 .nav-list li:nth-child(5){
+    margin-left: 0;
     order: 3;
 }
 
@@ -549,17 +592,37 @@ footer{
     color: #D4B254;
 }
 
+.hr-line-footer::before, .hr-line-footer::after {
+    content: '';
+    background-color: #777777;
+    display: block;
+}
+
+.hr-line-footer{
+    border: none;
+    background: url('/images/Group\ 40.png') no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content h5{
+    text-align: center;
+    margin:50px auto;
+}
+
+.hr-line-bottom{
+    margin-bottom:75px;
+    border:none;
+    background-color: #777777;
+    height: 1px; 
+    width: 90%;
+}
 
 
 
 @media screen and (min-width:2000px){
-    .hero-image{
-        width: 100%;
-    }
-
-    .header-wrapper hr{
-        max-width: 100% !important;
-    }
     
     .banner-cta{
         margin:128px 25px;
@@ -577,6 +640,46 @@ footer{
     .banner-img-container{
         min-width: 650px;
     }
+    
+}
+
+@media screen and (min-width:1242px){
+    .nav-list li:nth-child(2){
+        margin:0 75px;
+    }
+
+    .nav-list li:not(:nth-child(2)){
+        margin:0 25px;
+    }
+
+    .logo{
+        max-width: 75px;
+    }
+
+    .header-wrapper hr{
+        max-width: 980px !important;
+    }
+
+    .header-wrapper:hover .nav-list li:nth-child(2){
+        margin:0 10px !important;
+    }
+    
+    .header-wrapper:hover .nav-list li:not(:nth-child(2)){
+        margin:0 15px !important;
+    }
+
+    .hr-line-footer::before, .hr-line-footer::after  {
+        width: 42% !important;
+        height: 1px; 
+      }
+
+
+    .hr-line-footer{
+        background-size: 8% !important;
+        width: 85%;
+        height: 100px;
+    }
+    
 }
 
 
@@ -590,10 +693,8 @@ footer{
     }
 
     .header-wrapper{
-        margin-top:25px;
-        max-width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+        padding-top:25px;
+        max-width: 100%;
         left: 0;
         right: 0;
     }
@@ -615,6 +716,50 @@ footer{
     .review-controls-mobile{
         display: none;
     }
+
+    .header-wrapper hr{
+        max-width: 700px;
+    }
+
+    .header-wrapper:hover .nav-list li:nth-child(2){
+        margin:0 10px;
+    }
+    
+    .header-wrapper:hover .nav-list li:not(:nth-child(2)){
+        margin:0 10px;
+    }
+
+    .footer-cards{
+        width: unset;
+        display: flex;
+        justify-content: center;
+        gap:128px;
+    }
+
+    .social-card .footer-links li{
+        display: inline-block;
+    }
+
+    
+
+    .hr-line-footer::before, .hr-line-footer::after  {
+        width: 35%;
+        height: 1px; 
+      }
+
+
+    .hr-line-footer{
+        background-size: 10%;
+        width: 90%;
+        height: 100px;
+    }
+
+    .footer-content h5{
+        max-width: 550px;
+    }
+ 
+
+
 
 }
 
@@ -648,6 +793,41 @@ footer{
         margin-left: 25px;
     }
 
+    .footer-cards .logo-container{
+        margin-top:25px;
+    }
+
+    .footer-wrapper{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .hr-line-footer::before, .hr-line-footer::after  {
+        width: 35%;
+        height: 1px; 
+      }
+      
+      .hr-line-footer {
+        background-size: 15%;
+        width: 90%;
+        height: 100px;
+      }
+
+
+      .social-card .footer-links li{
+        display: inline-block;
+        margin:0 5px;
+      }
+
+      .footer-content p{
+        max-width: 450px;
+        margin: 50px auto;
+    }
+
+
+
 }
 
 
@@ -662,11 +842,6 @@ footer{
         margin-top:-5px;
     }
 
-    .footer-cards .logo-container{
-        margin-top:25px;
-    }
-
-
     .hero-cta{
         display: flex;
         flex-direction: column;
@@ -676,38 +851,14 @@ footer{
     }
 
     h1{
-        font-size: calc(52px - 1.2rem);
         max-width: 100%;
     }
 
     h2{
-        font-size: calc(42px - 0.65rem);
-        min-width: 50%;
+        min-width: 250px;
     }
 
-    h3{
-        font-size: calc(32px - 0.5rem);
-    }
 
-    h4, .social-card .fa-brands{
-        font-size: calc(24px - 0.65rem);
-    }
-    
-    h5{
-        font-size: calc(18px - 0.5rem);
-    }
-
-    p, li{
-        font-size: calc(15px - 0.2rem);
-    }
-
-    .reviews-card p{
-        font-size: calc(18px - 0.3rem);
-    }
-
-    .button{
-        font-size: calc(14px - 0.2rem);
-    }
 
     .banner{
         flex-direction: column;
@@ -757,59 +908,46 @@ footer{
         max-width: 45%;
     }
 
-    .footer-wrapper{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-
-    .hr-line-footer::before {
-        content: '';
-        background-color: #777777;
-        display: block;
-        width: 35%;
-        height: 1px; 
-      }
-      
-      .hr-line-footer::after {
-        content: '';
-        background-color: #777777;
-        display: block;
-        width: 35%;
-        height: 1px; 
-      }
-
-      .hr-line-footer {
-        border: none;
-        background: url('/images/Group\ 40.png') no-repeat;
-        background-size: 15%;
-        background-position: center;
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        height: 100px;
-        align-items: center;
-      }
-
-      .hr-line-bottom{
-        border:none;
-        background-color: #777777;
-        height: 1px; 
-        width: 90%;
-        margin-bottom:75px;
-      }
-
-      .social-card .footer-links li{
-        display: inline-block;
-        margin:0 5px;
-      }
-
-      .footer-content h5{
-        max-width: 350px;
-        margin: 50px auto;
+    .hero-cta{
+        top:220px;
     }
 }
+
+@media screen and (max-width:500px){
+
+    h1{
+        font-size: calc(52px - 1.1rem);
+    }
+
+    h2{
+        font-size: calc(42px - 0.75rem);
+    }
+
+    h3{
+        font-size: calc(32px - 0.5rem);
+    }
+
+    h4, .social-card .fa-brands{
+        font-size: calc(24px - 0.5rem);
+    }
+    
+    h5{
+        font-size: calc(18px - 0.45rem);
+    }
+
+    h6{
+        font-size: calc(13px - 0.25rem);
+    }
+
+    p, li{
+        font-size: calc(15px - 0.2rem);
+    }
+
+    .reviews-card p{
+        font-size: calc(18px - 0.2rem);
+    }
+}
+
 @media screen and (max-width:320px){
     .gallery-cols{
         flex-direction: column;
