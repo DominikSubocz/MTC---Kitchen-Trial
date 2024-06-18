@@ -4,11 +4,11 @@ showSlides();
 function showSlides() {
     let i;
     let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("dot");
+    let ovals = document.getElementsByClassName("oval");
 
     for(let i = 0; i < slides.length; i++){
         slides[i].style.display="none";
-        dots[i].classList.remove("active");
+        ovals[i].classList.remove("active");
     }
 
     slideIndex++;
@@ -17,7 +17,7 @@ function showSlides() {
         slideIndex = 1;
     }
 
-    dots[slideIndex-1].classList.add("active");
+    ovals[slideIndex-1].classList.add("active");
     slides[slideIndex-1].style.display = "block";  
     
     setTimeout(showSlides, 5000);

@@ -6,12 +6,15 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/main.js"></script>
     <script src="https://kit.fontawesome.com/ec47febbbd.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <header>
         <div class="header-wrapper">
-            <div class="mobile-navbar">
+            <div class="mobile-navbar show-mobile">
                 <div class="logo-container">
                     <img id="logo" class="logo" src="images/Group 40.png" alt="company logo">
                 </div>
@@ -25,6 +28,29 @@
                         <i class="fa fa-solid fa-bars"></i>
                     </a>
                 </div>
+            </div>
+            
+            <div class="nav-container show-desktop">
+
+                <ul class="nav-list">
+                    <li>
+                        <div>
+                            <i class="fa-brands fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-brands fa-instagram"></i>
+                        </div>
+                    </li>
+                    <li>                
+                        <div class="logo-container">
+                            <img id="logo" class="logo" src="images/Group 40.png" alt="company logo">
+                        </div>
+                    </li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">PLAN MY KITCHEN</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a class="button-outlined" href="#">MY ORDER<i class="fa fa-cart-shopping"></i></a></li>
+                </ul>
             </div>
             <hr>
             <div id="mobile-nav" class="mobile-menu-container show-mobile">
@@ -54,14 +80,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="nav-container show-desktop">
-                <ul class="nav-list">
-                    <li><small><a href="#">About us</a></small></li>
-                    <li><small><a href="#">Product</a></small></li>
-                    <li><small><a href="#">Resource</a></small></li>
-                    <li><small><a href="#">Contact</a></small></li>
-                </ul>
-            </div>
+
         </div>
     </header>
 
@@ -80,7 +99,7 @@
                     </div>
                     
                     <div class="hero-cta">
-                        <h5>DESIGN AND ORDER YOUR NEW KITCHEN ONLINE TODAY</h5>
+                        <h6>DESIGN AND ORDER YOUR NEW KITCHEN ONLINE TODAY</h6>
                         <h1>Bespoke & made to measure handmade kitchen design</h1>
                         <button class="button">ORDER NOW</button>
     
@@ -88,9 +107,9 @@
                 </div>
 
                     <div class="slider">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="oval" onclick="currentSlide(1)"></span>
+                        <span class="oval" onclick="currentSlide(2)"></span>
+                        <span class="oval" onclick="currentSlide(3)"></span>
                     </div>
             </div>
 
@@ -102,7 +121,7 @@
                     </div>
                     <div class="banner-cta">
                         <div class="banner-text">
-                            <h4>QUALITY CRAFTMANSHIP FROM BUILD TO DELIVERY</h4>
+                            <h6>QUALITY CRAFTMANSHIP FROM BUILD TO DELIVERY</h6>
                             <h2>Discover the beauty of a handmade kitchen</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget est sit amet sapien venenatis maximus vel in urna. Nam mauris arcu, feugiat in finibus vitae, sollicitudin id purus. Ut imperdiet, magna eu pharetra tincidunt, mauris purus ultrices.</p>
                         </div>
@@ -116,17 +135,51 @@
             </div>
     
             <div class="reviews-section">
-                <div class="reviews-card">
-                    <h4>WHAT OUR CUSTOMERS SAY</h4>
-                    <h3>Over 35 years expereience designing</h3>
-                    <p>Since my first contact I have received a very high level of customer service and advice with my kitchen plans. Ben responded very quickly to all of my emails and delivery of the kitchen was as planned.</p>
-                    <h5>Jane, Dundee</h5>
-                    <button class="button faq-button">FREQUENTLY ASKED QUESTIONS</button>
+                <div class="review-controls-desktop">
+                    <a  class="chevron-left" href="javascript:void(0);" onclick="prevReview()">
+                            <i class="fas fa-chevron-left" id="chevron-left"></i>
+                    </a>
+
+                    <a class="chevron-right" href="javascript:void(0);" onclick="nextReview()">
+                        <i class="fas fa-chevron-right" id="chevron-right"></i>
+                    </a>
                 </div>
+
+                <h6>WHAT OUR CUSTOMERS SAY</h6>
+                <div class="reviews-card review">
+                    <h3>Over 35 years expereience designing handmade kitchens</h3>
+                    <p>Since my first contact I have received a very high level of customer service and advice with my kitchen plans. Ben responded very quickly to all of my emails and delivery of the kitchen was as planned.</p>
+                    <p>Jane, Dundee</p>
+                </div>
+
+                <div class="reviews-card review">
+                    <h3>Exquisite! Top quality kitchen materials.</h3>
+                    <p>I am thoroughly impressed with the quality of the kitchen materials. Every piece exudes excellence and durability. It's evident that great care was taken in the selection and craftsmanship. Highly recommend for those seeking premium kitchen upgrades.</p>
+                    <p>Kyle, Montrose</p>
+                </div>
+
+                <div class="reviews-card review">
+                    <h3>Fantastic Customer Service Experience</h3>
+                    <p>I recently had an issue with my order and reached out to customer service for assistance. They were incredibly responsive and helpful throughout the entire process. Not only did they resolve my problem quickly, but they also went above and beyond to ensure I was satisfied. This level of service is rare and truly appreciated. Highly recommend for their excellent customer care!</p>
+                    <p>Chris, Dundee</p>
+                </div>
+                <button class="button faq-button">FREQUENTLY ASKED QUESTIONS</button>
+
+                <div class="review-controls-mobile dots-container">
+                    <a  class="chevron-left" href="javascript:void(0);" onclick="prevReview()">
+                        <i class="fas fa-chevron-left" id="chevron-left"></i>
+                    </a>
+                    <span class="dot">1</span>
+                    <span class="dot">2</span>
+                    <span class="dot">3</span>
+                    <a class="chevron-right" href="javascript:void(0);" onclick="nextReview()">
+                        <i class="fas fa-chevron-right" id="chevron-right"></i>
+                    </a>
+                  </div>
             </div>
 
             <div class="gallery-section">
-                <h2>Customer Gallery</h2>
+                <h3>Customer Gallery</h3>
                 <div class="gallery-cols">
                     <div class="gallery-card">
                         <img class="gallery-img" src="images/1.png" alt="Image of kitchen design with a fridge">
@@ -210,4 +263,6 @@
     
 </body>
 <script src="js/slideshow.js"></script>
+<script src="js/review_crousel.js"></script>
+
 </html>
