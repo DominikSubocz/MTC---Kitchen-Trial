@@ -21,6 +21,11 @@
     src: url('/fonts/HelveticaNeueRoman.otf');
   }
 
+  @font-face {
+    font-family: HelveticeNeueBold;
+    src: url('/fonts/HelveticaNeueBold.otf');
+  }
+
 html, body{
     width: 100%;
     overflow-x: hidden;
@@ -79,7 +84,7 @@ h1{
     font-family: HelveticaNeueRoman;
     font-size: 52px;
     line-height: 58px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 h1,h2,h3,h4,h5{
@@ -87,10 +92,13 @@ h1,h2,h3,h4,h5{
 }
 
 h2{
+    font-family: HelveticeNeueBold;
     font-size: 42px;
+    font-weight: 600;
 }
 
 h3{
+    font-family: HelveticeNeueBold;
     font-size:32px;
     font-weight: 400;
 }
@@ -103,7 +111,24 @@ h4{
     font-size: 24px;
 }
 
+.footer-content h6{
+    color: #777777;
+    text-align: center;
+    margin:50px auto;
+}
+
+.footer-card h4{
+    color: #EEEEEE;
+    font-weight: 600;
+}
+
 p{
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    color: #777777;
+}
+
+.reviews-card span{
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     color: #777777;
@@ -135,6 +160,9 @@ h6{
     letter-spacing: 3px;
 }
 
+.footer-content h6{
+    letter-spacing: normal;
+}
 
 .banner-text h6, .reviews-section h6{
     color: #D4B254;
@@ -146,6 +174,17 @@ h6{
 
 a{
     color: #fff;
+}
+
+.footer-links li a{
+    font-family: HelveticaNeueUltraLight;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.footer-links li{
+    margin:10px 0;
 }
 
 .logo {
@@ -163,19 +202,8 @@ a{
 .header-wrapper{
     position: absolute;
     width: 100%;
+    transition: all 0.5s ease;
 
-}
-
-.header-wrapper:hover{
-    background-color: #000000;
-}
-
-.header-wrapper:hover .nav-list h5{
-    display: block;
-}
-
-.header-wrapper:hover hr{
-    display: none;
 }
 
 
@@ -274,7 +302,7 @@ a{
 
 .hero-image{
     width: 100%;
-    height: 730px;
+    height: 850px;
     object-fit: cover;
 }
 
@@ -285,7 +313,7 @@ a{
     min-width: 320px;
     position: absolute;
     text-align: center;
-    top:225px;
+    top:300px;
     bottom:0;
     height: fit-content;
 }
@@ -310,13 +338,6 @@ hr{
     border-radius: 32px;
 }
 
-.button-outlined-alt{
-    background-color: #EEEEEE;
-    border-radius: 32px;
-    padding:14px 32px;
-    border: none;
-    color: #777777;
-}
 
 .oval {
     cursor: pointer;
@@ -381,7 +402,7 @@ hr{
   }
 
   .banner-cta h2{
-    max-width: 450px;
+    max-width: 490px;
   }
 
   .banner-cta p{
@@ -399,7 +420,6 @@ hr{
 
   .reviews-section{
     background-color: #EEEEEE;
-    margin: 50px 0;
   }
 
   .reviews-section{
@@ -412,7 +432,7 @@ hr{
   }
 
   .reviews-card h3{
-    max-width: 550px;
+    max-width: 570px;
     margin-top:5px;
   }
 
@@ -427,7 +447,7 @@ hr{
 
 
   .gallery-section{
-    margin: 0 auto;
+    margin: 75px auto;
     max-width: 1200px;
     padding: 0 1rem; 
     text-align: center;
@@ -458,10 +478,6 @@ hr{
     overflow: hidden
 }
 
-.footer-content h5{
-    color: #777777;
-}
-
 footer{
     margin-top:50px;
 }
@@ -471,7 +487,7 @@ footer{
     display: flex;
     background-image: url("/images/footer-img.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 .footer-cards, .footer-content{
@@ -527,8 +543,12 @@ footer{
     align-items: center;
 }
 
+.nav-list li{
+    letter-spacing: 3px;
+}
+
 .nav-list li:not(:nth-child(2)){
-    margin:0 15px;
+    margin:0 10px;
 }
 
 
@@ -539,7 +559,7 @@ footer{
 
 .nav-list li:nth-child(1){
     margin-left: 32px;
-    margin-right: 64px;
+    margin-right: 48px;
 
 }
 
@@ -559,7 +579,7 @@ footer{
 
 .nav-list li:nth-child(7){
     margin-left: 32px;
-    margin-right: 64px;
+    margin-right: 48px;
     order: 5;
 }
 
@@ -594,7 +614,7 @@ footer{
 
 .hr-line-footer::before, .hr-line-footer::after {
     content: '';
-    background-color: #777777;
+    background-color: #222222;
     display: block;
 }
 
@@ -607,18 +627,20 @@ footer{
     align-items: center;
 }
 
-.footer-content h5{
-    text-align: center;
-    margin:50px auto;
-}
 
 .hr-line-bottom{
     margin-bottom:75px;
     border:none;
-    background-color: #777777;
-    height: 1px; 
+    background-color: #222222;
+    height: 2px; 
     width: 90%;
 }
+
+.button-outlined .fa-cart-shopping{
+    margin-left: 10px;
+}
+
+
 
 
 
@@ -643,13 +665,22 @@ footer{
     
 }
 
-@media screen and (min-width:1242px){
+@media screen and (min-width:1272px){
+
+    .nav-list li:nth-child(1){
+        margin-right: 125px !important;
+    }
+
     .nav-list li:nth-child(2){
         margin:0 75px;
     }
 
     .nav-list li:not(:nth-child(2)){
-        margin:0 25px;
+        margin:0 15px;
+    }
+
+    .nav-list li:last-child{
+        margin-left: 125px;
     }
 
     .logo{
@@ -657,33 +688,47 @@ footer{
     }
 
     .header-wrapper hr{
-        max-width: 980px !important;
+        max-width: 1180px !important;
     }
 
     .header-wrapper:hover .nav-list li:nth-child(2){
         margin:0 10px !important;
     }
     
-    .header-wrapper:hover .nav-list li:not(:nth-child(2)){
+    .header-wrapper:hover .nav-list li{
         margin:0 15px !important;
     }
 
+    .header-wrapper:hover .nav-list li:last-child{
+        margin-left: 50px !important;
+    }
+
+    .header-wrapper:hover .nav-list li:first-child{
+        margin-right: 50px !important;
+    }
+
     .hr-line-footer::before, .hr-line-footer::after  {
-        width: 42% !important;
-        height: 1px; 
+        width: 45% !important;
       }
 
 
     .hr-line-footer{
         background-size: 8% !important;
-        width: 85%;
-        height: 100px;
+        width: 65% !important;
+    }
+
+    .nav-list .logo-container{
+        max-width: 100% !important;
+    }
+
+    .hr-line-bottom{
+        width: 65%;
     }
     
 }
 
-
-@media screen and (min-width:1024px) {
+/* Had to increase breakpoint to 1025 instead of 1024 as the header would disapear exactly at 1024 */
+@media screen and (min-width:1025px) {
     .show-desktop{
         display: block;
     }
@@ -693,15 +738,14 @@ footer{
     }
 
     .header-wrapper{
-        padding-top:25px;
         max-width: 100%;
         left: 0;
         right: 0;
     }
 
     .header-wrapper hr{
-        max-width: 1200px;
-        margin-top:50px;
+        max-width: 850px;
+        margin-top:20px;
     }
 
     .banner-img-container{
@@ -717,10 +761,6 @@ footer{
         display: none;
     }
 
-    .header-wrapper hr{
-        max-width: 700px;
-    }
-
     .header-wrapper:hover .nav-list li:nth-child(2){
         margin:0 10px;
     }
@@ -733,7 +773,11 @@ footer{
         width: unset;
         display: flex;
         justify-content: center;
-        gap:128px;
+        gap:105px;
+    }
+
+    .footer-content h6{
+        max-width: 420px;
     }
 
     .social-card .footer-links li{
@@ -744,7 +788,7 @@ footer{
 
     .hr-line-footer::before, .hr-line-footer::after  {
         width: 35%;
-        height: 1px; 
+        height: 2px; 
       }
 
 
@@ -756,6 +800,30 @@ footer{
 
     .footer-content h5{
         max-width: 550px;
+    }
+
+    .nav-list .logo-container{
+        max-width: 180px;
+    }
+
+    .header-wrapper:hover{
+        background-color: #000000;
+    }
+    
+    .header-wrapper:hover .nav-list h5{
+        display: block;
+    }
+    
+    .header-wrapper:hover hr{
+        display: none;
+    }
+
+    .header-wrapper:hover .nav-list .button-outlined{
+        background-color: #EEEEEE;
+        border-radius: 32px;
+        padding:14px 32px;
+        border: none;
+        color: #222222;
     }
  
 
