@@ -5,6 +5,9 @@ function showSlides() {
     let slides = document.getElementsByClassName("slide");
     let ovals = document.getElementsByClassName("oval");
 
+    if(slideIndex < 1){
+        slideIndex = 1;
+    }
     
     if (slideIndex > slides.length){
         slideIndex = 1;

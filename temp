@@ -1,0 +1,17 @@
+                <div class="review-cards" id="reviews">
+                    <div class="reviews-card review">
+
+                    </div>
+
+                    <div class="reviews-card review">
+                        <h3>Exquisite! Top quality kitchen materials.</h3>
+                        <p>I am thoroughly impressed with the quality of the kitchen materials. Every piece exudes excellence and durability. It's evident that great care was taken in the selection and craftsmanship. Highly recommend for those seeking premium kitchen upgrades.</p>
+                        <span>Kyle, Montrose</span>
+                    </div>
+
+                    <div class="reviews-card review">
+                        <h3>Fantastic Customer Service Experience</h3>
+                        <p>I recently had an issue with my order and reached out to customer service for assistance. They were incredibly responsive and helpful throughout the entire process. Not only did they resolve my problem quickly, but they also went above and beyond to ensure I was satisfied. This level of service is rare and truly appreciated. Highly recommend for their excellent customer care!</p>
+                        <span>Chris, Dundee</span>
+                    </div>
+                </div>

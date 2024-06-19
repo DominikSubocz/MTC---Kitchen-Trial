@@ -128,7 +128,7 @@ p{
     color: #777777;
 }
 
-.reviews-card span{
+.review-carousel_slide span{
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     color: #777777;
@@ -168,7 +168,7 @@ h6{
     color: #D4B254;
 }
 
-.reviews-card p{
+.review-carousel_slide p{
     font-size: 18px;
 }
 
@@ -429,12 +429,17 @@ hr{
   }
 
 
-  .reviews-card{
+  .review-carousel_slide{
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    top:0;
+    bottom:0;
+    width: 100%;
     transition: all 1s ease;
+    background-color: #EEEEEE;
   }
 
   .reviews-section{
@@ -445,20 +450,23 @@ hr{
     padding:50px 0;
   }
   
-  .reviews-card h3{
+  .review-carousel_slide h3{
     max-width: 570px;
     margin:5px 0;
   }
 
-  .reviews-card p {
+  .review-carousel_slide p {
     max-width: 620px;
   }
 
-  .review-cards{
+  .review-carousel_slide:not(:first-child){
+    opacity: 0;
+    }
+  .review-carousel_track{
     position: relative;
-    left: 33vw;
-    display: flex;
-    justify-content: center;
+    max-width: 100%;
+    min-height: 250px;
+ 
   }
 
 
@@ -1041,26 +1049,26 @@ footer{
         max-width: 375px;
     }
 
-    .reviews-card{
+    .review-carousel_slide{
         margin: 0 auto;
-        max-width: 80%;
+        max-width: 100%;
     }
 
-    .reviews-card h3{
+    .review-carousel_slide h3{
         min-width: 260px;
         max-width: 550px;
     }
 
-    .reviews-card p{
+    .review-carousel_slide p{
         min-width: 295px;
         max-width: 450px;
     }
 
-    .reviews-card h5{
+    .review-carousel_slide h5{
         margin:10px 0;
     }
 
-    .banner-text h2, .reviews-card h3, .hero-cta h1{
+    .banner-text h2, .review-carousel_slide h3, .hero-cta h1{
         margin-top:5px;
     }
 
@@ -1114,7 +1122,7 @@ footer{
         font-size: calc(15px - 0.2rem);
     }
 
-    .reviews-card p{
+    .review-carousel_slide p{
         font-size: calc(18px - 0.2rem);
     }
 

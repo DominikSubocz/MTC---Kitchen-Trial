@@ -1,4 +1,9 @@
 let reviewIndex = 1;
+const nextBtn = document.querySelector('#btn-next');
+const prevBtn = document.querySelector('#btn-prev');
+
+
+
 showReview();
 
 function nextReview(){
@@ -9,12 +14,14 @@ function nextReview(){
 function prevReview(){
     reviewIndex -= 1;
     showReview();
-
 }
 
+nextBtn.addEventListener("click", nextReview);
+prevBtn.addEventListener("click", prevReview);
+
+
 function showReview() {
-    let reviewsContainer = document.getElementById("reviews");
-    let reviews = document.getElementsByClassName("review");
+    let reviews = document.querySelectorAll('.review-carousel_slide');
     let dots = document.getElementsByClassName("dot");
 
 
