@@ -1,37 +1,46 @@
-let reviewIndex = 0;
+let reviewIndex = 1;
 showReview();
 
 function nextReview(){
-    reviewIndex +=1;
+    reviewIndex += 1;
     showReview();
 }
 
 function prevReview(){
-    reviewIndex -=1;
+    reviewIndex -= 1;
     showReview();
 
 }
 
 function showReview() {
-    let i;
+    let reviewsContainer = document.getElementById("reviews");
     let reviews = document.getElementsByClassName("review");
     let dots = document.getElementsByClassName("dot");
 
-    for(let i = 0; i < reviews.length; i++){
-        reviews[i].style.display="none";
+
+    if(reviewIndex < 1){
+        reviewIndex = 1;
+    } else if (reviewIndex > reviews.length){
+        reviewIndex = 1;
+    }
+
+
+    let position = reviewIndex * 33;
+
+     for(let i = 0; i < reviews.length; i++){
+        reviews[i].style.cssText="opacity:0";
         dots[i].classList.remove("active-dot");
     }
 
-    if (reviewIndex == reviews.length){
-        reviewIndex = 0;
-    } else if (reviewIndex < 0){
-        reviewIndex = reviews.length - 1;
-    }
+    console.log(position);
 
-    // console.log(reviewIndex + "" + reviews.length); Debug
 
-    reviews[reviewIndex].style.display="flex";
-    dots[reviewIndex].classList.add("active-dot");
+    reviews[reviewIndex - 1].style.cssText="opacity:1;";
+    dots[reviewIndex - 1].classList.add("active-dot");
+
+
+
+
 
 
 
