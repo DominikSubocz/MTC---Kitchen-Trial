@@ -117,6 +117,10 @@ hr{
     color: #222222;
 }
 
+button{
+    font-size: 15px;
+}
+
 .oval {
     cursor: pointer;
     height: 5px;
@@ -578,12 +582,17 @@ a{
 
 
 @media screen and (min-width:2500px){
+
+    .button{
+        padding:32px 64px
+    }
+
     .chevron-left{
-        margin-left: 30% !important;
+        margin-left: 25vw !important;
     }
 
     .chevron-right{
-        margin-right: 30% !important;
+        margin-right: 25vw !important;
     }
 
     .banner-cta{
@@ -592,28 +601,75 @@ a{
     }
 
     h1{
-        font-size: calc(52px + 0.85vw);
-        line-height: calc(58px + 0.85vw);
+        font-size: calc(52px + 0.90vw);
+        line-height: calc(58px + 0.90vw);
     }
 
     h2{
-        font-size: calc(42px + 0.85vw);
+        font-size: calc(42px + 0.90vw);
     }
 
     h3{
-        font-size: calc(32px + 0.85vw);
+        font-size: calc(32px + 0.80vw);
     }
 
     h4{
-        font-size: calc(24px + 0.85vw);
+        font-size: calc(24px + 0.80vw);
     }
 
     h5{
-        font-size: calc(18px + 0.45vw);
+        font-size: calc(18px + 0.5vw);
     }
 
     h6{
-        font-size: calc(13px + 0.25vw);
+        font-size: calc(13px + 0.4vw);
+    }
+
+    p, .review-carousel_slide span, .footer-links li a, button{
+        font-size: calc(15px + 0.30vw);
+    }
+
+    .hero-cta h1{
+        max-width: 1250px;
+    }
+
+    .banner-cta h2{
+        max-width: 850px;
+    }
+
+    .banner-cta p {
+        max-width: 1075px;
+    }
+
+    .review-carousel_slide h3{
+        max-width: 895px;
+    }
+
+    .review-carousel_slide p {
+        font-size: calc(18px + 0.35vw);
+        max-width: 920px;
+    }
+
+    .review-controls button{
+        font-size: 128px;
+    }
+
+    .about-card, .service-card{
+        margin-right: 150px;
+    }
+
+    .info-card{
+        margin-left: 75px;
+        margin-right: 175px;
+    }
+    
+    .social-card{
+        margin-left: 20px;
+        margin-right: 60px;
+    }
+
+    .banner-img-container{
+        max-height: 900px;
     }
 
 
@@ -719,7 +775,45 @@ a{
 }
 
 
+@media screen and (max-width:2500px){
 
+    .hero-cta h1{
+        max-width: 750px;
+    }
+
+    .review-carousel_slide p {
+        max-width: 620px;
+    }
+
+    .review-carousel_slide h3{
+        max-width: 570px;
+    }
+
+    .review-controls-desktop button{
+        font-size: 80px;
+    }
+
+    .about-card, .service-card{
+        margin-right: 75px;
+    }
+    
+    
+    .info-card{
+        margin-left: 50px;
+        margin-right: 175px;
+    }
+    
+    .social-card{
+        margin-left: 10px;
+        margin-right: 50px;
+    }
+
+    .banner-img-container{
+        max-height: 750px;
+    }
+    
+
+}
 
 @media screen and (min-width:1025px) {
     .show-desktop{
@@ -827,9 +921,10 @@ a{
     .banner-img-container{
         width: 100%;
         max-width: 50%;
-        max-height: 750px;
         flex-grow: 1;
     }
+
+
 }
 
 .nav-list .logo-container{
@@ -848,9 +943,7 @@ a{
 
 
 
-.review-carousel_slide p {
-    max-width: 620px;
-}
+
 
 .footer-wrapper{
     background-size: cover, 100%;
@@ -858,10 +951,6 @@ a{
 
 .footer-cards, .footer-content{
     width: 100%;
-}
-
-.hero-cta h1{
-    max-width: 750px;
 }
 
 .nav-list{
@@ -873,7 +962,6 @@ a{
 
 
 .review-carousel_slide h3{
-    max-width: 570px;
     margin:5px auto;
 }
 
@@ -898,9 +986,7 @@ a{
     margin:0 5px;
 }
 
-.review-controls-desktop button{
-    font-size: 80px;
-}
+
 
 .chevron-left{
     margin-left: 10%;
@@ -910,20 +996,6 @@ a{
     margin-right: 10%;
 }
 
-.about-card, .service-card{
-    margin-right: 75px;
-}
-
-
-.info-card{
-    margin-left: 50px;
-    margin-right: 175px;
-}
-
-.social-card{
-    margin-left: 10px;
-    margin-right: 50px;
-}
 
 @media screen and (max-width:1024px){
     .show-desktop{
