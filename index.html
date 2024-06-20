@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/main.js"></script>
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="stylesheet" href="experimental.css">
+
     <script src="https://kit.fontawesome.com/ec47febbbd.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,9 +25,9 @@
                     </a>
                 </div>
                 <div class="icon-conainer menu-btn-container show-mobile">
-                    <a href="javascript:void(0);" onclick="openMenu()">
+                    <button class="icon-btn" id="menu-btn">
                         <i class="fa fa-solid fa-bars"></i>
-                    </a>
+                    </button>
                 </div>
             </div>
             
@@ -57,9 +58,9 @@
             <div id="mobile-nav" class="mobile-menu-container show-mobile">
                 <div id="mobile-menu" class="mobile-menu hide-mobile-menu">
                     <div class="icon-conainer mobile-menu-icon close-icon" id="close-icon">
-                        <a href="javascript:void(0);" onclick="closeMenu()">
+                        <button id="close-btn" class="icon-btn close-btn">
                             <i class="fas fa-times"></i>
-                        </a>
+                        </button>
                     </div>
                     <ul class="nav-list-mobile">
                         <li>
@@ -77,7 +78,7 @@
                         <li><a href="#">PLAN MY KITCHEN</a></li>
                         <li><a href="#">ABOUT US</a></li>
                         <li><a href="#">GALLERY</a></li>
-                        <li><a class="button-outlined" href="#">MY ORDER<i class="fa fa-cart-shopping"></i></a></li>
+                        <li><a class="button-white" href="#">MY ORDER<i class="fa fa-cart-shopping"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -108,9 +109,9 @@
                 </div>
 
                     <div class="slider">
-                        <span class="oval" onclick="currentSlide(1)"></span>
-                        <span class="oval" onclick="currentSlide(2)"></span>
-                        <span class="oval" onclick="currentSlide(3)"></span>
+                        <span class="oval"></span>
+                        <span class="oval"></span>
+                        <span class="oval"></span>
                     </div>
             </div>
 
@@ -137,13 +138,13 @@
     
             <div class="reviews-section">
                 <div class="review-controls-desktop review-controls">
-                    <a  class="chevron-left" href="javascript:void(0);">
+                    <button  class="chevron-left no-border" id="btn-prev">
                             <i class="fas fa-chevron-left" id="btn-prev"></i>
-                    </a>
+                    </button>
 
-                    <a class="chevron-right" href="javascript:void(0);">
+                    <button class="chevron-right no-border" id="btn-next">
                         <i class="fas fa-chevron-right" id="btn-next"></i>
-                    </a>
+                    </button>
                 </div>
 
                 <h6>WHAT OUR CUSTOMERS SAY</h6>
@@ -172,15 +173,15 @@
                 <button class="button faq-button">FREQUENTLY ASKED QUESTIONS</button>
 
                 <div class="review-controls-mobile dots-container review-controls">
-                    <a  class="chevron-left" href="javascript:void(0);" onclick="prevReview()">
-                        <i class="fas fa-chevron-left" id="chevron-left"></i>
-                    </a>
+                    <button class="chevron-left no-border" id="btn-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
                     <span class="dot">1</span>
                     <span class="dot">2</span>
                     <span class="dot">3</span>
-                    <a class="chevron-right" href="javascript:void(0);" onclick="nextReview()">
-                        <i class="fas fa-chevron-right" id="chevron-right"></i>
-                    </a>
+                    <button class="chevron-right no-border" id="btn-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                   </div>
             </div>
 
@@ -284,6 +285,7 @@
     </footer>
     
 </body>
+<script src="js/main.js"></script>
 <script src="js/slideshow.js"></script>
 <script src="js/review_crousel.js"></script>
 <script src="js/gallery.js"></script>

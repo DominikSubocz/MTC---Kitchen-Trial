@@ -1,3 +1,4 @@
+// const nextBtn = document.querySelector('#btn-next');
 
 function viewGallery(){
     let gallery = document.getElementById("gallery");
