@@ -1210,6 +1210,8 @@ a{
     .show-mobile-menu{
         top:-75px;
     }
+
+
     
 }
 
@@ -1239,7 +1241,7 @@ a{
         font-size: calc(13px - 0.25rem);
     }
 
-    p, li{
+    p, li, button{
         font-size: calc(15px - 0.2rem);
     }
 
@@ -1254,6 +1256,10 @@ a{
     .faq-button{
         padding:16px 24px;
         max-width: 250px;
+    }
+
+    .button{
+        padding:10px 24px;
     }
 }
 
