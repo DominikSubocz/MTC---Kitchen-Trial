@@ -17,6 +17,8 @@ function fixOverflow(){
   if(window.innerWidth > 1024){
     html.classList.remove("no-scroll");
     document.body.classList.remove("no-scroll");
+
+    console.log(window.innerWidth)
   }
 }
 
@@ -142,14 +144,17 @@ function showReview() {
     }
 
     // Go through every review
-    for (let i = 0; i < reviews.length; i++) {
-        reviews[i].style.opacity = "0"; // Hide review
-        dots[i].classList.remove("active-dot"); 
-    }
+    reviews.forEach((review, i) => {
+        review.classList.remove('active-slide');
+        review.style.display = 'none';
+        dots[i].classList.remove('active-dot');
+    });
 
-    // console.log(reviewIndex); Debug
+    reviews[reviewIndex].style.display = 'block';
+    setTimeout(() => {
+        reviews[reviewIndex].classList.add('active-slide');
+    }, 10); // Short delay to trigger transition
 
-    reviews[reviewIndex].style.opacity = "1"; // Show review
     dots[reviewIndex].classList.add("active-dot"); // Indicate which review
 }
 
