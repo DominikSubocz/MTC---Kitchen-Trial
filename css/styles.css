@@ -260,6 +260,9 @@ h5{
 
 .nav-list h5{
     display: none;
+}
+
+.nav-list h5, .nav-list-mobile h5{
     font-family: HelveticaNeueUltraLight;
     letter-spacing: 5px;
     color: #EEEEEE;
