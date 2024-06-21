@@ -18,7 +18,7 @@ This quite a challenging project, for which I had only 5 days to complete, and o
 ## Side by Side Comparison
 Here’s a side-by-side comparison of the original design and my implementation:
 
-![Comparison](https://github.com/DominikSubocz/MTC---Kitchen-Trial/assets/121230993/a076dd6f-ba13-476a-a4b4-3c6a02daa8d6)
+![Comparison](https://github.com/DominikSubocz/MTC-Kitchen-Trial/assets/121230993/cb19aee0-8702-4922-aefa-d7baa0b79c5d)
 
 Original Design:
 ![image](https://github.com/DominikSubocz/MTC---Kitchen-Trial/assets/121230993/89d6bc6a-1f9a-4aae-8c90-3363289ebecf)
