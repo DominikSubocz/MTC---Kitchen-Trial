@@ -65,7 +65,7 @@ closeBtn.addEventListener('click', closeMenu);
 
 
 let slideIndex = 0; // Current slide
-// showSlides(); // Start the slideshow
+showSlides(); // Start the slideshow
 
 
 
