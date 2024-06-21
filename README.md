@@ -24,7 +24,7 @@ Original Design:
 ![image](https://github.com/DominikSubocz/MTC---Kitchen-Trial/assets/121230993/89d6bc6a-1f9a-4aae-8c90-3363289ebecf)
 
 ## Implementation Notes
-Heading Levels: Used '<h6>' instead of '<h5>' for the small text above larger headings as it matched the design more closely. The <h5> in the design was 18px, while the intended element was smaller, at 13px.
+Heading Levels: Used h6 instead of h5 for the small text above larger headings as it matched the design more closely. The h5 in the design was 18px, while the intended element was smaller, at 13px.
 Font Awesome Icons: Used an alternative Font Awesome icon for chevrons as the Pro version was not available.
 
 ## Technologies Used
