@@ -25,6 +25,7 @@ Original Design:
 
 ## Implementation Notes
 Heading Levels: Used h6 instead of h5 for the small text above larger headings as it matched the design more closely. The h5 in the design was 18px, while the intended element was smaller, at 13px.
+
 Font Awesome Icons: Used an alternative Font Awesome icon for chevrons as the Pro version was not available.
 
 ## Technologies Used
